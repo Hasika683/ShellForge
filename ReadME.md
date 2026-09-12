@@ -20,4 +20,11 @@ make run
 - Proper memory cleanup using free()
 Note: Go to Github ReadMe, edit and add the content/ here above features and click on commit changes to view updated ReadMe file.
 
+## Week 3 Features
+- Command parsing using strtok()
+- Dynamic argv[] construction
+- Modular parser implementation
+- Ready for process execution with execvp()
+
+
 
