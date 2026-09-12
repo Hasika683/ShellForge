@@ -12,3 +12,12 @@ make
 ## Run
 make run
 
+## Week 2 Features
+
+- Dynamic command input
+- Memory allocation using malloc()
+- Automatic buffer expansion using realloc()
+- Proper memory cleanup using free()
+Note: Go to Github ReadMe, edit and add the content/ here above features and click on commit changes to view updated ReadMe file.
+
+
