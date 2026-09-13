@@ -26,5 +26,10 @@ Note: Go to Github ReadMe, edit and add the content/ here above features and cli
 - Modular parser implementation
 - Ready for process execution with execvp()
 
+## Week 4 Features
+- Process creation using fork()
+- Command execution using execvp()
+- Parent-child synchronization using waitpid()
+- Error handling using perror()
 
 
