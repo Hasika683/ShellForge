@@ -5,15 +5,15 @@
 #include "shell.h"
 #include "input.h"
 #include "parser.h"
+#include "process.h"
 
 int main()
 {
     char *line;
     char **tokens;
-    int i;
 
     printf("=====================================\n");
-    printf(" Welcome to %s Version 3.0\n", SHELL_NAME);
+    printf(" Welcome to %s Version 4.0\n", SHELL_NAME);
     printf("=====================================\n");
 
     while (1)
@@ -32,12 +32,7 @@ int main()
 
         if (tokens[0] != NULL)
         {
-            printf("Parsed tokens:\n");
-
-            for (i = 0; tokens[i] != NULL; i++)
-            {
-                printf("argv[%d] = %s\n", i, tokens[i]);
-            }
+            execute(tokens);
         }
 
         free_tokens(tokens);
