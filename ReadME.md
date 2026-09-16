@@ -42,3 +42,12 @@ Note: Go to Github ReadMe, edit and add the content/ here above features and cli
 - exit
 - Environment variables
 
+## Week 6 Features
+
+- Signal handling
+- SIGINT support
+- SIGCHLD support
+- Zombie cleanup
+- Shell survives Ctrl+C
+
+
