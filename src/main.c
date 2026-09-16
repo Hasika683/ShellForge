@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include "shell.h"
 #include "input.h"
 #include "parser.h"
 #include "process.h"
+#include "builtin.h"
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     char **tokens;
 
     printf("=====================================\n");
-    printf(" Welcome to %s Version 4.0\n", SHELL_NAME);
+    printf(" Welcome to %s Version 5.0\n", SHELL_NAME);
     printf("=====================================\n");
 
     while (1)
@@ -22,17 +22,14 @@ int main()
 
         line = read_line();
 
-        if (strcmp(line, "exit") == 0)
-        {
-            free(line);
-            break;
-        }
-
         tokens = parse_line(line);
 
         if (tokens[0] != NULL)
         {
-            execute(tokens);
+            if (!execute_builtin(tokens))
+            {
+                execute(tokens);
+            }
         }
 
         free_tokens(tokens);
