@@ -6,6 +6,7 @@
 #include "parser.h"
 #include "process.h"
 #include "builtin.h"
+#include "signals.h"
 
 int main()
 {
@@ -13,8 +14,10 @@ int main()
     char **tokens;
 
     printf("=====================================\n");
-    printf(" Welcome to %s Version 5.0\n", SHELL_NAME);
+    printf(" Welcome to %s Version 6.0\n", SHELL_NAME);
     printf("=====================================\n");
+
+    initialize_signals();
 
     while (1)
     {
@@ -36,7 +39,6 @@ int main()
         free(line);
     }
 
-    printf("Goodbye!\n");
-
     return 0;
 }
+
